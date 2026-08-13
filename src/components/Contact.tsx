@@ -76,7 +76,7 @@ export function Contact() {
                   href={siteConfig.linkedin}
                   icon={<LinkedInIcon className="size-4" />}
                   label="LinkedIn"
-                  value="bhojraj-chavan"
+                  value="team-kestryn"
                 />
                 <ContactLink
                   href={siteConfig.github}

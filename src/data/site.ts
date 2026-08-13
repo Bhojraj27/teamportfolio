@@ -19,8 +19,8 @@ export const siteConfig = {
   availability: "Available for Remote Projects",
   microCopy: "Working remotely with clients worldwide",
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
-  email: "bhojrajchavan5@gmail.com",
-  linkedin: "https://linkedin.com/in/bhojraj-chavan",
+  email: "teamkestryn@gmail.com",
+  linkedin: "https://www.linkedin.com/in/team-kestryn-191b79429",
   github: "https://github.com/Bhojraj27",
   whatsapp: "https://wa.me/917887780210",
   seo: {

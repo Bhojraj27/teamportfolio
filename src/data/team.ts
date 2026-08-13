@@ -20,6 +20,8 @@ export type TeamMember = {
   github: string;
   email: string;
   photo: string;
+  /** CSS object-position, e.g. "center 65%". Raise the % to move the face up. */
+  photoPosition: string;
   initials: string;
   accent: "blue" | "indigo" | "violet" | "cyan";
 };
@@ -44,6 +46,7 @@ export const team: TeamMember[] = [
     github: "https://github.com/Bhojraj27",
     email: "bhojrajchavan5@gmail.com",
     photo: "/team/bhojraj-chavan.png",
+    photoPosition: "center 70%",
     initials: "BC",
     accent: "blue",
   },
@@ -59,6 +62,7 @@ export const team: TeamMember[] = [
     github: "https://github.com/your-handle",
     email: "you@yourteam.com",
     photo: "",
+    photoPosition: "center 50%",
     initials: "SH",
     accent: "indigo",
   },
@@ -74,6 +78,7 @@ export const team: TeamMember[] = [
     github: "https://github.com/your-handle",
     email: "you@yourteam.com",
     photo: "",
+    photoPosition: "center 50%",
     initials: "AM",
     accent: "cyan",
   },
@@ -89,6 +94,7 @@ export const team: TeamMember[] = [
     github: "https://github.com/your-handle",
     email: "you@yourteam.com",
     photo: "",
+    photoPosition: "center 50%",
     initials: "VV",
     accent: "violet",
   },
@@ -104,6 +110,7 @@ export const team: TeamMember[] = [
     github: "https://github.com/your-handle",
     email: "you@yourteam.com",
     photo: "",
+    photoPosition: "center 50%",
     initials: "PV",
     accent: "blue",
   },

@@ -52,7 +52,8 @@ function MemberCard({ member }: { member: TeamMember }) {
             alt={`${member.name}, ${member.role}`}
             fill
             sizes="(min-width: 1280px) 220px, (min-width: 640px) 45vw, 90vw"
-            className="object-cover object-[center_18%] saturate-[0.9] contrast-[1.04]"
+            className="object-cover saturate-[0.9] contrast-[1.04]"
+            style={{ objectPosition: member.photoPosition }}
             priority={member.id === "01"}
           />
         ) : (

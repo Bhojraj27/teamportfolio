@@ -22,7 +22,7 @@ const dotMap = {
 export function TechStack() {
   return (
     <section id="expertise" className="relative py-24 sm:py-28">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
       <Container>
         <Reveal>
           <SectionHeading
@@ -39,12 +39,12 @@ export function TechStack() {
                 <h3 className="pt-1 text-sm font-medium uppercase tracking-[0.18em] text-faint">
                   {category.title}
                 </h3>
-                <div className="no-scrollbar -mx-5 flex gap-2 overflow-x-auto px-5 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0">
+                <div className="flex flex-wrap items-center gap-2">
                   {category.items.map((item) => (
                     <span
                       key={item}
                       className={cn(
-                        "inline-flex shrink-0 items-center gap-2 rounded-full border border-white/8 bg-surface px-3.5 py-2 text-sm text-muted transition duration-300",
+                        "inline-flex items-center gap-2 rounded-full border border-white/8 bg-surface px-3.5 py-2 text-sm text-muted transition duration-300",
                         accentMap[category.accent],
                       )}
                     >

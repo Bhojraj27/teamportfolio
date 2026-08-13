@@ -2,6 +2,8 @@
 
 Premium Next.js portfolio for a five-person remote software team.
 
+**Read [`context.md`](./context.md) first.** That file is the full project context for every developer (and for AI tools helping you edit this repo).
+
 ## Stack
 
 - Next.js (App Router)

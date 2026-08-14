@@ -133,59 +133,137 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* Animatable theme tokens — smooth toggle without laggy universal * transitions */
+@property --background {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #0a0f18;
+}
+
+@property --foreground {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #f8fafc;
+}
+
+@property --background-alt {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #111827;
+}
+
+@property --accent {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #5b8cff;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5.5rem;
   background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* One compositor crossfade beats animating hundreds of backdrop-filters */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.38s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 2;
+}
+
+/* Tailwind `transition` includes backdrop-filter — exclude it site-wide */
+@layer utilities {
+  .transition {
+    transition-property:
+      color, background-color, border-color, text-decoration-color, fill, stroke,
+      opacity, box-shadow, transform, filter;
+  }
+
+  .transition-all {
+    transition-property:
+      color, background-color, border-color, text-decoration-color, fill, stroke,
+      opacity, box-shadow, transform, filter;
+  }
+}
+
+.theme-surface {
+  transition:
+    background-color 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+    color 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Theme wordmarks — same box size, swap by data-theme */
+.logo-wordmark {
+  object-position: left center;
+}
+
+.logo-on-dark-theme {
+  display: block;
+}
+
+.logo-on-light-theme {
+  display: none;
+}
+
+[data-theme="light"] .logo-on-dark-theme {
+  display: none;
+}
+
+[data-theme="light"] .logo-on-light-theme {
+  display: block;
 }
 
 body {
-  background:
-    radial-gradient(900px 520px at 8% -8%, var(--mesh-a), transparent 55%),
-    radial-gradient(760px 480px at 92% 0%, var(--mesh-b), transparent 50%),
-    radial-gradient(700px 420px at 70% 100%, var(--mesh-c), transparent 55%),
-    var(--background);
+  position: relative;
+  isolation: isolate;
+  background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
   min-height: 100%;
 }
 
-/* Smooth dark ↔ light crossfade (enabled briefly on toggle) */
-html.theme-animating,
-html.theme-animating *,
-html.theme-animating *::before,
-html.theme-animating *::after {
-  transition:
-    background-color 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-    background 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-    color 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-    border-color 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-    outline-color 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-    fill 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-    stroke 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-    opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-    filter 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-    backdrop-filter 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-    -webkit-backdrop-filter 0.45s cubic-bezier(0.22, 1, 0.36, 1) !important;
+body::before,
+body::after {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  transition: opacity 0.38s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.glass-nav {
-  transition:
-    background-color 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-    background 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-    border-color 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+body::before {
+  opacity: 1;
+  background:
+    radial-gradient(900px 520px at 8% -8%, rgb(91 140 255 / 0.16), transparent 55%),
+    radial-gradient(760px 480px at 92% 0%, rgb(139 124 255 / 0.09), transparent 50%),
+    radial-gradient(700px 420px at 70% 100%, rgb(46 196 182 / 0.07), transparent 55%);
 }
 
-.section-alt,
-.section-accent-wash,
-.section-sage-wash {
-  transition:
-    background-color 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-    background 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-    color 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-    border-color 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+body::after {
+  opacity: 0;
+  background:
+    radial-gradient(900px 520px at 8% -8%, rgb(59 113 246 / 0.1), transparent 55%),
+    radial-gradient(760px 480px at 92% 0%, rgb(99 102 241 / 0.07), transparent 50%),
+    radial-gradient(700px 420px at 70% 100%, rgb(13 148 136 / 0.06), transparent 55%);
+}
+
+[data-theme="light"] body::before {
+  opacity: 0;
+}
+
+[data-theme="light"] body::after {
+  opacity: 1;
 }
 
 ::selection {
@@ -338,6 +416,10 @@ html.theme-animating *::after {
   backdrop-filter: blur(18px) saturate(140%);
   -webkit-backdrop-filter: blur(18px) saturate(140%);
   box-shadow: var(--glass-shadow);
+  transition:
+    background-color 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.32s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .glass-cool {
@@ -346,6 +428,9 @@ html.theme-animating *::after {
   backdrop-filter: blur(18px) saturate(145%);
   -webkit-backdrop-filter: blur(18px) saturate(145%);
   box-shadow: var(--glass-shadow);
+  transition:
+    background-color 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.32s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .glass-strong {
@@ -354,6 +439,9 @@ html.theme-animating *::after {
   backdrop-filter: blur(22px) saturate(150%);
   -webkit-backdrop-filter: blur(22px) saturate(150%);
   box-shadow: var(--glass-shadow);
+  transition:
+    background-color 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.32s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .glass-interactive {
@@ -364,7 +452,7 @@ html.theme-animating *::after {
   box-shadow: var(--glass-shadow);
   transition:
     transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-    background 0.35s ease,
+    background-color 0.32s cubic-bezier(0.22, 1, 0.36, 1),
     border-color 0.35s ease,
     box-shadow 0.35s ease;
 }
@@ -386,6 +474,9 @@ html.theme-animating *::after {
   border-bottom: 1px solid color-mix(in srgb, var(--accent) 22%, var(--glass-border));
   backdrop-filter: blur(20px) saturate(150%);
   -webkit-backdrop-filter: blur(20px) saturate(150%);
+  transition:
+    background-color 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.32s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /* Primary CTA: accent fill, not gray glass */
@@ -659,14 +750,26 @@ html.theme-animating *::after {
     scroll-behavior: auto;
   }
 
-  html.theme-animating,
-  html.theme-animating *,
-  html.theme-animating *::before,
-  html.theme-animating *::after,
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+
+  body::before,
+  body::after {
+    transition: none;
+  }
+
   .glass-nav,
   .section-alt,
   .section-accent-wash,
-  .section-sage-wash {
+  .section-sage-wash,
+  .glass,
+  .glass-panel,
+  .glass-cool,
+  .glass-strong,
+  .glass-interactive {
     transition: none !important;
   }
 

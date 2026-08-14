@@ -9,7 +9,7 @@ export function Footer() {
       <Container>
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
-            <Logo />
+            <Logo size="footer" />
             <p className="mt-4 max-w-sm text-sm leading-6 text-muted">
               {siteConfig.tagline}
             </p>

@@ -8,6 +8,7 @@ import {
   useMemo,
   useState,
 } from "react";
+import { flushSync } from "react-dom";
 
 export type Theme = "light" | "dark";
 
@@ -19,17 +20,19 @@ type ThemeContextValue = {
 
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 const STORAGE_KEY = "kestryn-theme";
-const THEME_TRANSITION_MS = 480;
 
-function applyTheme(theme: Theme, animate = false) {
-  const root = document.documentElement;
-  if (animate && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    root.classList.add("theme-animating");
-    window.setTimeout(() => {
-      root.classList.remove("theme-animating");
-    }, THEME_TRANSITION_MS);
+function applyTheme(theme: Theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+}
+
+function runThemeChange(update: () => void) {
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduceMotion || typeof document.startViewTransition !== "function") {
+    update();
+    return;
   }
-  root.setAttribute("data-theme", theme);
+
+  document.startViewTransition(update);
 }
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
@@ -50,20 +53,27 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const setTheme = useCallback((next: Theme) => {
-    setThemeState((current) => {
-      if (current !== next) {
-        applyTheme(next, true);
-      } else {
+    runThemeChange(() => {
+      flushSync(() => {
         applyTheme(next);
-      }
-      return next;
+        setThemeState(next);
+      });
+      window.localStorage.setItem(STORAGE_KEY, next);
     });
-    window.localStorage.setItem(STORAGE_KEY, next);
   }, []);
 
   const toggleTheme = useCallback(() => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  }, [setTheme, theme]);
+    runThemeChange(() => {
+      flushSync(() => {
+        setThemeState((current) => {
+          const next: Theme = current === "dark" ? "light" : "dark";
+          applyTheme(next);
+          window.localStorage.setItem(STORAGE_KEY, next);
+          return next;
+        });
+      });
+    });
+  }, []);
 
   const value = useMemo(
     () => ({ theme, setTheme, toggleTheme }),

@@ -17,14 +17,14 @@ export function ThemeToggle() {
     >
       <span className="relative grid size-4 place-items-center">
         <Sun
-          className={`absolute size-4 transition-all duration-300 ease-out ${
+          className={`absolute size-4 transition-[opacity,transform] duration-300 ease-out ${
             isDark
               ? "scale-100 rotate-0 opacity-100"
               : "scale-50 -rotate-90 opacity-0"
           }`}
         />
         <Moon
-          className={`absolute size-4 transition-all duration-300 ease-out ${
+          className={`absolute size-4 transition-[opacity,transform] duration-300 ease-out ${
             isDark
               ? "scale-50 rotate-90 opacity-0"
               : "scale-100 rotate-0 opacity-100"

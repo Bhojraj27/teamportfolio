@@ -1,26 +1,42 @@
-import { siteConfig } from "@/data/site";
+import Image from "next/image";
+import { brandAssets } from "@/data/brand";
 import { cn } from "@/lib/utils";
 
-export function Logo({ className }: { className?: string }) {
+/** Shared wordmark canvas — both PNGs are 2172×724 */
+const WORDMARK = { width: 2172, height: 724 } as const;
+
+const sizeClasses = {
+  nav: "h-9 w-auto sm:h-10",
+  footer: "h-10 w-auto sm:h-11",
+} as const;
+
+export function Logo({
+  className,
+  size = "nav",
+}: {
+  className?: string;
+  size?: keyof typeof sizeClasses;
+}) {
+  const imageClass = cn("logo-wordmark shrink-0 object-contain object-left", sizeClasses[size]);
+
   return (
-    <span className={cn("inline-flex items-center gap-2.5", className)}>
-      <span className="relative grid size-8 place-items-center" aria-hidden="true">
-        <svg viewBox="0 0 32 32" className="size-8">
-          <circle cx="10" cy="10" r="2.1" fill="var(--accent)" />
-          <circle cx="22" cy="10" r="2.1" fill="var(--brand)" />
-          <circle cx="10" cy="22" r="2.1" fill="var(--accent-2)" />
-          <circle cx="22" cy="22" r="2.1" fill="var(--accent)" />
-          <path
-            d="M10 10 L22 10 L22 22 L10 22 Z"
-            fill="none"
-            stroke="color-mix(in srgb, var(--accent) 45%, transparent)"
-            strokeWidth="1"
-          />
-        </svg>
-      </span>
-      <span className="font-display text-[15px] font-semibold tracking-[0.18em] text-foreground">
-        {siteConfig.name}
-      </span>
+    <span className={cn("inline-flex items-center", className)}>
+      <Image
+        src={brandAssets.wordmarkLight}
+        alt="Kestryn"
+        width={WORDMARK.width}
+        height={WORDMARK.height}
+        priority={size === "nav"}
+        className={cn(imageClass, "logo-on-dark-theme")}
+      />
+      <Image
+        src={brandAssets.wordmarkDark}
+        alt="Kestryn"
+        width={WORDMARK.width}
+        height={WORDMARK.height}
+        priority={size === "nav"}
+        className={cn(imageClass, "logo-on-light-theme")}
+      />
     </span>
   );
 }

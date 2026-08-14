@@ -1,106 +1,106 @@
 @import "tailwindcss";
 
-/* Soft Graphite Glass — dark */
+/* Electric Sky Glass — dark */
 :root,
 [data-theme="dark"] {
   color-scheme: dark;
-  --background: #0b0d10;
-  --background-alt: #10141a;
-  --foreground: #f4f6f9;
-  --muted: #9aa6b5;
-  --faint: #6e7a8a;
-  --surface: #141922;
-  --surface-2: #1a212c;
-  --border: rgb(143 163 188 / 0.16);
-  --accent: #8fa3bc;
-  --accent-strong: #a8bbd4;
-  --accent-soft: rgb(143 163 188 / 0.16);
-  --accent-2: #8fa89a;
-  --accent-2-soft: rgb(143 168 154 / 0.14);
-  --on-accent: #0b0d10;
-  --indigo: #8fa3bc;
-  --violet: #a3aec0;
-  --cyan: #8fa89a;
-  --glass: rgb(255 255 255 / 0.045);
-  --glass-cool: rgb(143 163 188 / 0.08);
-  --glass-strong: rgb(255 255 255 / 0.08);
-  --glass-hover: rgb(143 163 188 / 0.14);
-  --glass-border: rgb(255 255 255 / 0.1);
-  --glass-border-hover: rgb(143 163 188 / 0.42);
-  --glass-shadow: 0 12px 40px rgb(0 0 0 / 0.32);
-  --glass-inset: inset 0 1px 0 rgb(255 255 255 / 0.1);
-  --glass-glow: 0 0 0 1px rgb(143 163 188 / 0.18), 0 10px 28px rgb(143 163 188 / 0.08);
-  --nav-bg: rgb(11 13 16 / 0.72);
-  --mesh-a: rgb(143 163 188 / 0.14);
-  --mesh-b: rgb(143 168 154 / 0.07);
-  --mesh-c: rgb(255 255 255 / 0.03);
-  --grid-line: rgb(255 255 255 / 0.035);
-  --selection: rgb(143 163 188 / 0.3);
-  --text-grad-a: #f7f8fa;
-  --text-grad-b: #d5dde8;
-  --text-grad-c: #8fa3bc;
-  --mockup-bg: #12171f;
-  --cta-bg: #8fa3bc;
-  --cta-bg-hover: #a8bbd4;
-  --cta-text: #0b0d10;
-  --cta-secondary-border: rgb(143 163 188 / 0.35);
-  --cursor-dot: #f4f6f9;
-  --cursor-ring: rgb(143 163 188 / 0.42);
-  --cursor-ring-fill: rgb(143 163 188 / 0.08);
-  --cursor-glow: rgb(143 163 188 / 0.28);
-  --cursor-hover-ring: rgb(168 187 212 / 0.7);
-  --cursor-hover-fill: rgb(143 163 188 / 0.14);
+  --background: #041525;
+  --background-alt: #07233a;
+  --foreground: #f4fbff;
+  --muted: #8fd4f2;
+  --faint: #5ea8c9;
+  --surface: #0a2b45;
+  --surface-2: #0e3654;
+  --border: rgb(0 194 255 / 0.28);
+  --accent: #00c2ff;
+  --accent-strong: #6adcff;
+  --accent-soft: rgb(0 194 255 / 0.22);
+  --accent-2: #00e0b8;
+  --accent-2-soft: rgb(0 224 184 / 0.2);
+  --on-accent: #03111c;
+  --indigo: #00c2ff;
+  --violet: #4fd4ff;
+  --cyan: #00e0b8;
+  --glass: rgb(0 194 255 / 0.1);
+  --glass-cool: rgb(0 194 255 / 0.14);
+  --glass-strong: rgb(255 255 255 / 0.1);
+  --glass-hover: rgb(0 194 255 / 0.24);
+  --glass-border: rgb(106 220 255 / 0.28);
+  --glass-border-hover: rgb(0 194 255 / 0.72);
+  --glass-shadow: 0 16px 44px rgb(0 20 40 / 0.45);
+  --glass-inset: inset 0 1px 0 rgb(255 255 255 / 0.16);
+  --glass-glow: 0 0 0 1px rgb(0 194 255 / 0.35), 0 14px 36px rgb(0 194 255 / 0.24);
+  --nav-bg: rgb(4 21 37 / 0.74);
+  --mesh-a: rgb(0 194 255 / 0.38);
+  --mesh-b: rgb(0 224 184 / 0.22);
+  --mesh-c: rgb(79 212 255 / 0.14);
+  --grid-line: rgb(106 220 255 / 0.1);
+  --selection: rgb(0 194 255 / 0.42);
+  --text-grad-a: #ffffff;
+  --text-grad-b: #b8eeff;
+  --text-grad-c: #00c2ff;
+  --mockup-bg: #08263d;
+  --cta-bg: #00c2ff;
+  --cta-bg-hover: #4fd4ff;
+  --cta-text: #03111c;
+  --cta-secondary-border: rgb(0 194 255 / 0.55);
+  --cursor-dot: #f4fbff;
+  --cursor-ring: rgb(0 194 255 / 0.58);
+  --cursor-ring-fill: rgb(0 194 255 / 0.14);
+  --cursor-glow: rgb(0 194 255 / 0.38);
+  --cursor-hover-ring: rgb(106 220 255 / 0.88);
+  --cursor-hover-fill: rgb(0 194 255 / 0.22);
 }
 
-/* Soft Frost Glass — light */
+/* Electric Sky Glass — light */
 [data-theme="light"] {
   color-scheme: light;
-  --background: #eef2f6;
-  --background-alt: #e4eaf1;
-  --foreground: #0f172a;
-  --muted: #526074;
-  --faint: #738094;
+  --background: #eaf7ff;
+  --background-alt: #d7f0ff;
+  --foreground: #04263d;
+  --muted: #1f6484;
+  --faint: #3d7d9a;
   --surface: #ffffff;
-  --surface-2: #f5f8fb;
-  --border: rgb(75 98 128 / 0.16);
-  --accent: #4b6280;
-  --accent-strong: #3a4f6a;
-  --accent-soft: rgb(75 98 128 / 0.12);
-  --accent-2: #4f6b63;
-  --accent-2-soft: rgb(79 107 99 / 0.12);
-  --on-accent: #f8fafc;
-  --indigo: #4b6280;
-  --violet: #5c6b80;
-  --cyan: #4f6b63;
-  --glass: rgb(255 255 255 / 0.62);
-  --glass-cool: rgb(75 98 128 / 0.06);
-  --glass-strong: rgb(255 255 255 / 0.82);
-  --glass-hover: rgb(255 255 255 / 0.94);
-  --glass-border: rgb(15 23 42 / 0.1);
-  --glass-border-hover: rgb(75 98 128 / 0.36);
-  --glass-shadow: 0 14px 36px rgb(15 23 42 / 0.08);
-  --glass-inset: inset 0 1px 0 rgb(255 255 255 / 0.9);
-  --glass-glow: 0 0 0 1px rgb(75 98 128 / 0.16), 0 12px 28px rgb(75 98 128 / 0.08);
-  --nav-bg: rgb(238 242 246 / 0.78);
-  --mesh-a: rgb(75 98 128 / 0.12);
-  --mesh-b: rgb(79 107 99 / 0.08);
-  --mesh-c: rgb(255 255 255 / 0.85);
-  --grid-line: rgb(15 23 42 / 0.055);
-  --selection: rgb(75 98 128 / 0.22);
-  --text-grad-a: #0f172a;
-  --text-grad-b: #334155;
-  --text-grad-c: #4b6280;
-  --mockup-bg: #f8fafc;
-  --cta-bg: #4b6280;
-  --cta-bg-hover: #3a4f6a;
-  --cta-text: #f8fafc;
-  --cta-secondary-border: rgb(75 98 128 / 0.32);
-  --cursor-dot: #0f172a;
-  --cursor-ring: rgb(75 98 128 / 0.45);
-  --cursor-ring-fill: rgb(75 98 128 / 0.08);
-  --cursor-glow: rgb(75 98 128 / 0.22);
-  --cursor-hover-ring: rgb(58 79 106 / 0.75);
-  --cursor-hover-fill: rgb(75 98 128 / 0.14);
+  --surface-2: #f2fbff;
+  --border: rgb(0 138 214 / 0.2);
+  --accent: #008ad6;
+  --accent-strong: #006fb3;
+  --accent-soft: rgb(0 138 214 / 0.14);
+  --accent-2: #00a88a;
+  --accent-2-soft: rgb(0 168 138 / 0.16);
+  --on-accent: #f4fbff;
+  --indigo: #008ad6;
+  --violet: #1a9be0;
+  --cyan: #00a88a;
+  --glass: rgb(255 255 255 / 0.74);
+  --glass-cool: rgb(0 138 214 / 0.09);
+  --glass-strong: rgb(255 255 255 / 0.9);
+  --glass-hover: rgb(215 240 255 / 0.96);
+  --glass-border: rgb(0 138 214 / 0.2);
+  --glass-border-hover: rgb(0 138 214 / 0.5);
+  --glass-shadow: 0 16px 40px rgb(0 138 214 / 0.14);
+  --glass-inset: inset 0 1px 0 rgb(255 255 255 / 0.96);
+  --glass-glow: 0 0 0 1px rgb(0 138 214 / 0.22), 0 14px 32px rgb(0 138 214 / 0.16);
+  --nav-bg: rgb(234 247 255 / 0.82);
+  --mesh-a: rgb(0 138 214 / 0.22);
+  --mesh-b: rgb(0 168 138 / 0.16);
+  --mesh-c: rgb(255 255 255 / 0.92);
+  --grid-line: rgb(0 138 214 / 0.1);
+  --selection: rgb(0 194 255 / 0.32);
+  --text-grad-a: #04263d;
+  --text-grad-b: #008ad6;
+  --text-grad-c: #00a88a;
+  --mockup-bg: #f4fbff;
+  --cta-bg: #008ad6;
+  --cta-bg-hover: #006fb3;
+  --cta-text: #f4fbff;
+  --cta-secondary-border: rgb(0 138 214 / 0.38);
+  --cursor-dot: #04263d;
+  --cursor-ring: rgb(0 138 214 / 0.5);
+  --cursor-ring-fill: rgb(0 138 214 / 0.12);
+  --cursor-glow: rgb(0 138 214 / 0.28);
+  --cursor-hover-ring: rgb(0 111 179 / 0.8);
+  --cursor-hover-fill: rgb(0 138 214 / 0.16);
 }
 
 @theme inline {
@@ -373,7 +373,9 @@ html.theme-animating *::after {
   border: 1px solid transparent;
   background: var(--cta-bg);
   color: var(--cta-text);
-  box-shadow: 0 10px 28px color-mix(in srgb, var(--accent) 28%, transparent);
+  box-shadow:
+    0 10px 28px color-mix(in srgb, var(--accent) 36%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--accent) 25%, transparent);
   transition:
     background 0.25s ease,
     border-color 0.25s ease,
@@ -383,7 +385,9 @@ html.theme-animating *::after {
 
 .btn-glass:hover {
   background: var(--cta-bg-hover);
-  box-shadow: 0 12px 32px color-mix(in srgb, var(--accent) 36%, transparent);
+  box-shadow:
+    0 14px 36px color-mix(in srgb, var(--accent) 44%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--accent) 35%, transparent);
   transform: translateY(-1px);
 }
 

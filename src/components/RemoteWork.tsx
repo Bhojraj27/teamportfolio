@@ -5,7 +5,7 @@ import { remotePoints } from "@/data/whyUs";
 export function RemoteWork() {
   return (
     <section className="section-shell section-alt section-pad relative">
-      <div className="pointer-events-none absolute inset-0 overflow-hidden bg-[radial-gradient(circle_at_center,rgba(143,163,188,0.08),transparent_55%)]" />
+      <div className="pointer-events-none absolute inset-0 overflow-hidden bg-[radial-gradient(circle_at_center,color-mix(in_srgb,var(--accent)_14%,transparent),transparent_55%)]" />
       <Container>
         <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] lg:items-center lg:gap-10">
           <Reveal>

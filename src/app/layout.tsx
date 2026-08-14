@@ -4,6 +4,7 @@ import { FluidCursor } from "@/components/FluidCursor";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
+import { ToastProvider } from "@/components/ui/Toast";
 import { siteConfig } from "@/data/site";
 import "./globals.css";
 
@@ -99,23 +100,25 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       </head>
       <body className="flex min-h-full flex-col overflow-x-hidden bg-background font-sans text-foreground">
         <ThemeProvider>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-          />
-          <a
-            href="#main"
-            className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-accent focus:px-4 focus:py-2 focus:text-sm focus:text-background"
-          >
-            Skip to content
-          </a>
-          <div className="grain" aria-hidden="true" />
-          <FluidCursor />
-          <Navbar />
-          <main id="main" className="flex-1 overflow-x-hidden">
-            {children}
-          </main>
-          <Footer />
+          <ToastProvider>
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <a
+              href="#main"
+              className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-accent focus:px-4 focus:py-2 focus:text-sm focus:text-background"
+            >
+              Skip to content
+            </a>
+            <div className="grain" aria-hidden="true" />
+            <FluidCursor />
+            <Navbar />
+            <main id="main" className="flex-1 overflow-x-hidden">
+              {children}
+            </main>
+            <Footer />
+          </ToastProvider>
         </ThemeProvider>
       </body>
     </html>

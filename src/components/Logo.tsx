@@ -6,14 +6,14 @@ export function Logo({ className }: { className?: string }) {
     <span className={cn("inline-flex items-center gap-2.5", className)}>
       <span className="relative grid size-8 place-items-center" aria-hidden="true">
         <svg viewBox="0 0 32 32" className="size-8">
-          <circle cx="10" cy="10" r="2.1" fill="#8fa3bc" />
-          <circle cx="22" cy="10" r="2.1" fill="#a3aec0" />
-          <circle cx="10" cy="22" r="2.1" fill="#9bb0a8" />
-          <circle cx="22" cy="22" r="2.1" fill="#8fa3bc" />
+          <circle cx="10" cy="10" r="2.1" fill="var(--accent)" />
+          <circle cx="22" cy="10" r="2.1" fill="var(--accent-strong)" />
+          <circle cx="10" cy="22" r="2.1" fill="var(--accent-2)" />
+          <circle cx="22" cy="22" r="2.1" fill="var(--accent)" />
           <path
             d="M10 10 L22 10 L22 22 L10 22 Z"
             fill="none"
-            stroke="rgba(255,255,255,0.28)"
+            stroke="color-mix(in srgb, var(--accent) 60%, transparent)"
             strokeWidth="1"
           />
         </svg>

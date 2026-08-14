@@ -251,11 +251,11 @@ Do not commit `.env.local` or secrets.
 
 Themes via `data-theme` on `<html>` (`ThemeProvider` + Navbar sun/moon toggle). Defaults to system preference; persists in `localStorage` key `kestryn-theme`.
 
-**Dark (Soft Graphite):** base `#0B0D10` / alt `#10141A`, text `#F4F6F9` / muted `#9AA6B5`, primary accent steel `#8FA3BC`, secondary sage `#8FA89A` (sparingly). Cool-tinted glass + accent-edged hover.
+**Dark (Electric Sky):** base `#041525` / alt `#07233A`, text `#F4FBFF`, primary `#00C2FF`, secondary mint `#00E0B8`. Colored glass + visible sky/mint washes.
 
-**Light (Soft Frost):** base `#EEF2F6` / alt `#E4EAF1`, charcoal text, accent `#4B6280`, sage `#4F6B63`. White glass cards with charcoal borders.
+**Light (Electric Sky):** base `#EAF7FF` / alt `#D7F0FF`, navy text, accent `#008AD6`, mint `#00A88A`. White glass cards with bright azure borders.
 
-Hierarchy helpers: `.section-alt`, `.section-accent-wash`, `.section-sage-wash`, `.glass-cool`, `.glass-interactive` (accent border/glow on hover), `.btn-glass` (accent fill CTA), `.btn-glass-secondary` (quiet glass + accent border), `.card-accent-edge`, `.chip-interactive`, `.nav-link`. Sections use `.section-shell` for containment. No neon.
+Hierarchy helpers: `.section-alt`, `.section-accent-wash`, `.section-sage-wash`, `.glass-cool`, `.glass-interactive` (accent border/glow on hover), `.btn-glass` (accent fill CTA), `.btn-glass-secondary` (quiet glass + accent border), `.card-accent-edge`, `.chip-interactive`, `.nav-link`. Sections use `.section-shell` for containment.
 
 Fonts: Geist (body), Syne (headings), Geist Mono (labels).
 

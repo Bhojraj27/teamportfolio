@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Mail, MessageCircle } from "lucide-react";
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 import { Container } from "@/components/ui/Section";
+import { useToast } from "@/components/ui/Toast";
 import { budgetRanges, projectTypes, timelines } from "@/data/contact";
 import { siteConfig } from "@/data/site";
 import { cn } from "@/lib/utils";
@@ -12,6 +13,7 @@ const fieldClass =
   "w-full rounded-2xl border border-[color:var(--glass-border)] bg-[color:var(--glass)] px-4 py-3 text-sm text-foreground outline-none backdrop-blur-md transition placeholder:text-faint focus:border-[color:var(--glass-border-hover)] focus:bg-[color:var(--glass-hover)] focus:shadow-[var(--glass-glow)]";
 
 export function Contact() {
+  const { toast } = useToast();
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
     "idle",
   );
@@ -39,11 +41,33 @@ export function Contact() {
           message: data.get("message"),
         }),
       });
-      if (!response.ok) throw new Error("Request failed");
+
+      const payload = (await response.json().catch(() => null)) as
+        | { ok?: boolean; error?: string }
+        | null;
+
+      if (!response.ok || !payload?.ok) {
+        throw new Error(payload?.error || "Request failed");
+      }
+
       setStatus("sent");
       form.reset();
-    } catch {
+      toast({
+        tone: "success",
+        title: "Message sent",
+        description:
+          "Thanks for reaching out. We received your inquiry and will follow up soon.",
+      });
+    } catch (error) {
       setStatus("error");
+      toast({
+        tone: "error",
+        title: "Could not send message",
+        description:
+          error instanceof Error && error.message
+            ? `${error.message} You can also email us at ${siteConfig.email}.`
+            : `Something went wrong. Email us directly at ${siteConfig.email}.`,
+      });
     }
   }
 
@@ -147,17 +171,6 @@ export function Contact() {
                   ? "Sending…"
                   : "Send Project Inquiry →"}
               </button>
-              {status === "sent" ? (
-                <p className="text-sm text-accent">
-                  Thanks. We received your inquiry and will follow up with next
-                  steps.
-                </p>
-              ) : null}
-              {status === "error" ? (
-                <p className="text-sm text-red-400">
-                  Something went wrong. Email us directly at {siteConfig.email}.
-                </p>
-              ) : null}
             </form>
           </div>
         </div>

@@ -31,7 +31,7 @@ export const services: Service[] = [
     number: "03",
     title: "SaaS & Product Development",
     description:
-      "Build complete SaaS products from MVP to production — billing-ready architecture, dashboards, and multi-tenant foundations.",
+      "Build complete SaaS products from MVP to production: billing-ready architecture, dashboards, and multi-tenant foundations.",
     tags: ["MVP", "SaaS", "Dashboards", "Scale"],
     icon: "saas",
   },

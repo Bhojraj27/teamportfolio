@@ -12,7 +12,7 @@ export function EngagementModels() {
           <SectionHeading
             eyebrow="Engagement"
             title="Ways to Work Together"
-            subtitle="Choose the model that matches your product stage. Pricing is scoped after we understand the work — never a fake number on a page."
+            subtitle="Choose the model that matches your product stage. Pricing is scoped after we understand the work, never a fake number on a page."
           />
         </Reveal>
         <div className="mt-14 grid gap-4 lg:grid-cols-3">

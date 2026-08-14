@@ -1,4 +1,4 @@
-# Kestryn — Remote Engineering Portfolio
+# Kestryn: Remote Engineering Portfolio
 
 Premium Next.js portfolio for a remote software studio.
 

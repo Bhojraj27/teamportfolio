@@ -10,7 +10,7 @@ export function WhyUs() {
           <SectionHeading
             eyebrow="Why us"
             title="Why Work With Us?"
-            subtitle="Credibility through craft, communication, and production-ready engineering — not inflated claims."
+            subtitle="Credibility through craft, communication, and production-ready engineering, not inflated claims."
           />
         </Reveal>
         <div className="mt-14 grid gap-4 md:grid-cols-2 xl:grid-cols-3">

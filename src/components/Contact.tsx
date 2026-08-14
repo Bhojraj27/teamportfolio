@@ -149,7 +149,7 @@ export function Contact() {
               </button>
               {status === "sent" ? (
                 <p className="text-sm text-cyan">
-                  Thanks — we received your inquiry and will follow up with next
+                  Thanks. We received your inquiry and will follow up with next
                   steps.
                 </p>
               ) : null}

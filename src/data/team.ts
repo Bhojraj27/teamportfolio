@@ -32,7 +32,7 @@ export const team: TeamMember[] = [
     name: "Bhojraj Chavan",
     role: "Senior Full-Stack Engineer",
     intro:
-      "Builds production SaaS products across React, TypeScript, Node.js, and AWS — from product UI and APIs through cloud deployment.",
+      "Builds production SaaS products across React, TypeScript, Node.js, and AWS, from product UI and APIs through cloud deployment.",
     yearsOfExperience: "2 years 10 months+",
     technologies: [
       "React",

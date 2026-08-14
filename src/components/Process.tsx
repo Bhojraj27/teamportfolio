@@ -11,7 +11,7 @@ export function Process() {
           <SectionHeading
             eyebrow="Process"
             title="How We Work"
-            subtitle="A clear path from conversation to production — without ceremony that slows delivery."
+            subtitle="A clear path from conversation to production, without ceremony that slows delivery."
           />
         </Reveal>
 

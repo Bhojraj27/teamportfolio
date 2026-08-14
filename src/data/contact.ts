@@ -13,14 +13,14 @@ export const projectTypes = [
 export const budgetRanges = [
   "Let’s discuss",
   "Under $5k",
-  "$5k – $15k",
-  "$15k – $50k",
+  "$5k to $15k",
+  "$15k to $50k",
   "$50k+",
 ] as const;
 
 export const timelines = [
   "ASAP",
-  "1–2 months",
-  "3–6 months",
+  "1 to 2 months",
+  "3 to 6 months",
   "Flexible",
 ] as const;

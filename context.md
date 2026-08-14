@@ -1,4 +1,4 @@
-# Kestryn — Project Context
+# Kestryn: Project Context
 
 Read this file first. It is the shared source of truth for the website, the team, and how to change content.
 
@@ -12,7 +12,7 @@ If you are an AI assistant helping a teammate: follow this file before inventing
 
 Do **not** publish headcount, names, or photos on the live site.
 
-The site should feel like a high-end software studio — not a basic personal developer page.
+The site should feel like a high-end software studio, not a basic personal developer page.
 
 Primary conversion action: **Start a Project**.
 
@@ -33,7 +33,7 @@ Target clients: startups, SaaS companies, international businesses, agencies, fo
 | Email | teamkestryn@gmail.com |
 | LinkedIn | https://www.linkedin.com/in/team-kestryn-191b79429 |
 | WhatsApp | https://wa.me/917887780210 |
-| GitHub (site default) | https://github.com/Bhojraj27 — replace with the team org when we have one |
+| GitHub (site default) | https://github.com/Bhojraj27 (replace with the team org when we have one) |
 
 Visual direction:
 
@@ -41,7 +41,7 @@ Visual direction:
 - Type: white / off-white
 - Accents: electric blue, indigo, violet, subtle cyan
 - Premium, minimal, lots of whitespace
-- Subtle glow and motion — not neon, not cartoon, not a generic template
+- Subtle glow and motion: not neon, not cartoon, not a generic template
 
 Logo mark on the site: 4 connected nodes (frontend, backend, cloud, mobile).
 
@@ -58,10 +58,10 @@ Two people focus on **React Native**. Three focus on **MERN + Next.js + AWS + de
 | ID | Name | Role | Stack focus | Profile status |
 | --- | --- | --- | --- | --- |
 | 01 | Bhojraj Chavan | Senior Full-Stack Engineer | React, Next.js, TypeScript, Node.js, MongoDB, AWS | Filled (photo + experience) |
-| 02 | Shubham Hanmane | React Native Engineer | React Native, JS, REST APIs | Placeholder — update your own card |
-| 03 | Atharv Mirajkar | React Native Engineer | React Native, TS, REST APIs | Placeholder — update your own card |
-| 04 | Vikas Vitekar | Full-Stack Engineer | React, Next.js, Node.js, MongoDB, AWS | Placeholder — update your own card |
-| 05 | Pranil Veer | Full-Stack / DevOps Engineer | React, Node.js, AWS, Docker, CI/CD | Placeholder — update your own card |
+| 02 | Shubham Hanmane | React Native Engineer | React Native, JS, REST APIs | Placeholder: update your own card |
+| 03 | Atharv Mirajkar | React Native Engineer | React Native, TS, REST APIs | Placeholder: update your own card |
+| 04 | Vikas Vitekar | Full-Stack Engineer | React, Next.js, Node.js, MongoDB, AWS | Placeholder: update your own card |
+| 05 | Pranil Veer | Full-Stack / DevOps Engineer | React, Node.js, AWS, Docker, CI/CD | Placeholder: update your own card |
 
 ### Team card rules
 

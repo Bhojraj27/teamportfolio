@@ -24,7 +24,7 @@ export const siteConfig = {
   github: "https://github.com/Bhojraj27",
   whatsapp: "https://wa.me/917887780210",
   seo: {
-    title: `${TEAM_NAME} — Remote Software Development`,
+    title: `${TEAM_NAME}: Remote Software Development`,
     description:
       "Remote software development specializing in React, Next.js, Node.js, AWS, PostgreSQL, MySQL, MongoDB, React Native and CI/CD.",
   },

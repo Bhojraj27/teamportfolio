@@ -10,7 +10,7 @@ export function ProductLifecycle() {
           <SectionHeading
             eyebrow="Capability"
             title="From First Commit to Production"
-            subtitle="One team covering the full product lifecycle — from discovery through deployment and ongoing scale."
+            subtitle="One team covering the full product lifecycle, from discovery through deployment and ongoing scale."
           />
         </Reveal>
 

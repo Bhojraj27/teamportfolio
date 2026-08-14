@@ -3,7 +3,7 @@ export const engagementModels = [
     id: "project",
     title: "Project-Based",
     description:
-      "A defined scope with clear milestones — from first commit through production release.",
+      "A defined scope with clear milestones, from first commit through production release.",
     bestFor: ["MVPs", "SaaS products", "Websites", "Dashboards", "Mobile applications"],
     cta: "Discuss a Project",
     featured: false,
@@ -21,7 +21,7 @@ export const engagementModels = [
     id: "partner",
     title: "Remote Engineering Partner",
     description:
-      "An extension of your existing team — reliable delivery without adding hiring overhead.",
+      "An extension of your existing team: reliable delivery without adding hiring overhead.",
     bestFor: ["Agencies", "Existing engineering teams", "Ongoing development"],
     cta: "Partner With Us",
     featured: false,

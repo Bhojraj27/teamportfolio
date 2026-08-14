@@ -9,7 +9,7 @@ import { siteConfig } from "@/data/site";
 import { cn } from "@/lib/utils";
 
 const fieldClass =
-  "w-full rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-3 text-sm text-foreground outline-none transition placeholder:text-faint focus:border-accent/50";
+  "w-full rounded-2xl border border-[color:var(--glass-border)] bg-[color:var(--glass)] px-4 py-3 text-sm text-foreground outline-none backdrop-blur-md transition placeholder:text-faint focus:border-[color:var(--glass-border-hover)] focus:bg-[color:var(--glass-hover)] focus:shadow-[var(--glass-glow)]";
 
 export function Contact() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
@@ -48,11 +48,11 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="relative py-24 sm:py-28">
+    <section id="contact" className="section-shell section-alt section-pad relative">
       <Container>
-        <div className="overflow-hidden rounded-[2rem] border border-white/8 bg-surface">
+        <div className="glass-strong overflow-hidden rounded-[2rem]">
           <div className="grid lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
-            <div className="border-b border-white/8 p-7 sm:p-10 lg:border-b-0 lg:border-r">
+            <div className="border-b border-[color:var(--glass-border)] p-7 sm:p-10 lg:border-b-0 lg:border-r">
               <p className="text-[11px] uppercase tracking-[0.24em] text-accent">
                 Contact
               </p>
@@ -141,14 +141,14 @@ export function Contact() {
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="mt-2 inline-flex items-center justify-center rounded-full bg-gradient-to-r from-accent via-indigo to-violet px-5 py-3.5 text-sm font-medium text-white transition hover:brightness-110 disabled:opacity-60"
+                className="btn-glass mt-2 inline-flex items-center justify-center rounded-full px-5 py-3.5 text-sm font-medium disabled:opacity-60"
               >
                 {status === "sending"
                   ? "Sending…"
                   : "Send Project Inquiry →"}
               </button>
               {status === "sent" ? (
-                <p className="text-sm text-cyan">
+                <p className="text-sm text-accent">
                   Thanks. We received your inquiry and will follow up with next
                   steps.
                 </p>
@@ -207,7 +207,7 @@ function Select({
           Select
         </option>
         {options.map((option) => (
-          <option key={option} value={option} className="bg-[#0c0e16]">
+          <option key={option} value={option} className="bg-surface text-foreground">
             {option}
           </option>
         ))}
@@ -230,9 +230,9 @@ function ContactLink({
   return (
     <a
       href={href}
-      className="flex items-center gap-3 rounded-2xl border border-white/8 px-4 py-3 transition hover:border-white/16"
+      className="flex items-center gap-3 rounded-2xl border border-[color:var(--glass-border)] bg-[color:var(--glass)] px-4 py-3 backdrop-blur-md transition hover:border-[color:var(--glass-border-hover)] hover:bg-[color:var(--glass-hover)]"
     >
-      <span className="grid size-9 place-items-center rounded-full bg-white/4 text-accent">
+      <span className="grid size-9 place-items-center rounded-full bg-[color:var(--glass-strong)] text-accent">
         {icon}
       </span>
       <span>

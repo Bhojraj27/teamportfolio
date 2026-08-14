@@ -4,7 +4,7 @@ import { whyUs } from "@/data/whyUs";
 
 export function WhyUs() {
   return (
-    <section className="relative py-24 sm:py-28">
+    <section className="section-shell section-sage-wash section-pad relative">
       <Container>
         <Reveal>
           <SectionHeading
@@ -16,7 +16,7 @@ export function WhyUs() {
         <div className="mt-14 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {whyUs.map((item, index) => (
             <Reveal key={item.title} delay={index * 60}>
-              <article className="h-full rounded-3xl border border-white/8 bg-surface p-6">
+              <article className="glass-interactive card-accent-edge h-full rounded-3xl p-6">
                 <p className="font-mono text-[11px] text-accent">
                   {String(index + 1).padStart(2, "0")}
                 </p>

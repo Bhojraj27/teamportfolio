@@ -13,7 +13,7 @@ export function ProjectCard({
   reverse?: boolean;
 }) {
   return (
-    <article className="overflow-hidden rounded-[2rem] border border-white/8 bg-surface">
+    <article className="glass-interactive overflow-hidden rounded-[2rem]">
       <div
         className={cn(
           "grid lg:grid-cols-2",
@@ -58,7 +58,7 @@ export function ProjectCard({
             {project.technologies.map((tech) => (
               <span
                 key={tech}
-                className="rounded-full border border-white/8 px-2.5 py-1 text-[11px] text-faint transition group-hover:border-accent/20"
+                className="rounded-full border border-[color:var(--glass-border)] bg-[color:var(--accent-soft)] px-2.5 py-1 text-[11px] text-muted"
               >
                 {tech}
               </span>
@@ -78,7 +78,7 @@ export function ProjectCard({
             {project.githubUrl ? (
               <Link
                 href={project.githubUrl}
-                className="inline-flex items-center gap-2 rounded-full border border-white/8 px-4 py-3 text-sm text-muted transition hover:text-foreground"
+                className="btn-glass-secondary inline-flex items-center gap-2 rounded-full px-4 py-3 text-sm"
                 {...(project.githubUrl !== "#"
                   ? { target: "_blank", rel: "noreferrer" }
                   : {})}

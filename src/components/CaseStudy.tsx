@@ -119,7 +119,7 @@ export function CaseStudy({ project }: { project: Project }) {
           </div>
         </section>
 
-        <div className="mt-20 rounded-[2rem] border border-accent/25 bg-gradient-to-br from-accent/10 to-violet/5 p-8 text-center sm:p-12">
+        <div className="glass-panel mt-20 rounded-[2rem] p-8 text-center sm:p-12">
           <h2 className="font-display text-3xl font-semibold">
             Have a similar project? Let&apos;s build it.
           </h2>
@@ -156,18 +156,18 @@ function SectionBlock({ title, body }: { title: string; body: string }) {
 function ArchitectureDiagram() {
   const layers = ["Client", "API", "Data", "Cloud"];
   return (
-    <div className="rounded-[1.6rem] border border-white/8 bg-surface p-5">
+    <div className="glass-panel rounded-[1.6rem] p-5">
       <p className="text-[11px] uppercase tracking-[0.2em] text-faint">
         Architecture diagram
       </p>
       <div className="mt-5 space-y-3">
         {layers.map((layer, index) => (
           <div key={layer} className="text-center">
-            <div className="rounded-xl border border-white/10 bg-white/4 py-3 text-sm text-foreground">
+            <div className="rounded-xl border border-white/12 bg-white/[0.05] py-3 text-sm text-foreground">
               {layer}
             </div>
             {index < layers.length - 1 ? (
-              <div className="mx-auto h-4 w-px bg-gradient-to-b from-accent to-violet" />
+              <div className="mx-auto h-4 w-px bg-gradient-to-b from-white/30 to-transparent" />
             ) : null}
           </div>
         ))}

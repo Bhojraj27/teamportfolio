@@ -249,7 +249,13 @@ Do not commit `.env.local` or secrets.
 
 ## Design tokens (quick)
 
-Background `#05060A`. Text `#F4F5F8`. Muted `#9AA1B5`. Accent `#4F8CFF`. Indigo `#6D7BFF`. Violet `#8B7DFF`. Cyan `#4FD1C5`.
+Themes via `data-theme` on `<html>` (`ThemeProvider` + Navbar sun/moon toggle). Defaults to system preference; persists in `localStorage` key `kestryn-theme`.
+
+**Dark (Soft Graphite):** base `#0B0D10` / alt `#10141A`, text `#F4F6F9` / muted `#9AA6B5`, primary accent steel `#8FA3BC`, secondary sage `#8FA89A` (sparingly). Cool-tinted glass + accent-edged hover.
+
+**Light (Soft Frost):** base `#EEF2F6` / alt `#E4EAF1`, charcoal text, accent `#4B6280`, sage `#4F6B63`. White glass cards with charcoal borders.
+
+Hierarchy helpers: `.section-alt`, `.section-accent-wash`, `.section-sage-wash`, `.glass-cool`, `.glass-interactive` (accent border/glow on hover), `.btn-glass` (accent fill CTA), `.btn-glass-secondary` (quiet glass + accent border), `.card-accent-edge`, `.chip-interactive`, `.nav-link`. Sections use `.section-shell` for containment. No neon.
 
 Fonts: Geist (body), Syne (headings), Geist Mono (labels).
 

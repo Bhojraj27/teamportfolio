@@ -10,7 +10,7 @@ export function FAQ() {
   const [open, setOpen] = useState<number>(0);
 
   return (
-    <section className="relative py-24 sm:py-28">
+    <section className="section-shell section-accent-wash section-pad relative">
       <Container>
         <div className="grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]">
           <SectionHeading
@@ -18,18 +18,23 @@ export function FAQ() {
             title="Questions, answered."
             subtitle="Straightforward answers for founders, agencies, and companies building remotely."
           />
-          <div className="divide-y divide-white/8 rounded-[1.8rem] border border-white/8 bg-surface">
+          <div className="glass-cool divide-y divide-[color:var(--glass-border)] rounded-[1.8rem]">
             {faqs.map((item, index) => {
               const isOpen = open === index;
               return (
                 <div key={item.question}>
                   <button
                     type="button"
-                    className="flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-6"
+                    className="flex w-full items-center justify-between gap-4 px-5 py-5 text-left transition hover:bg-[color:var(--accent-soft)] sm:px-6"
                     aria-expanded={isOpen}
                     onClick={() => setOpen(isOpen ? -1 : index)}
                   >
-                    <span className="text-sm font-medium text-foreground sm:text-[15px]">
+                    <span
+                      className={cn(
+                        "text-sm font-medium sm:text-[15px]",
+                        isOpen ? "text-accent" : "text-foreground",
+                      )}
+                    >
                       {item.question}
                     </span>
                     <ChevronDown

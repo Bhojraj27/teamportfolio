@@ -19,7 +19,7 @@ const avatarAccent = {
 
 export function Team() {
   return (
-    <section id="team" className="relative py-24 sm:py-28">
+    <section id="team" className="section-shell relative py-24 sm:py-28">
       <Container>
         <Reveal>
           <SectionHeading

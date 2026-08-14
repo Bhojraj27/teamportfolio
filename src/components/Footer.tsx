@@ -5,7 +5,7 @@ import { siteConfig } from "@/data/site";
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/8 pb-10 pt-16">
+    <footer className="section-shell border-t border-[color:var(--glass-border)] pb-8 pt-12 sm:pb-10 sm:pt-14">
       <Container>
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
@@ -62,14 +62,14 @@ export function Footer() {
           {siteConfig.footerTech.map((tech) => (
             <span
               key={tech}
-              className="rounded-full border border-white/8 px-2.5 py-1 text-[11px] text-faint"
+              className="rounded-full border border-[color:var(--glass-border)] px-2.5 py-1 text-[11px] text-faint"
             >
               {tech}
             </span>
           ))}
         </div>
 
-        <div className="mt-10 flex flex-col gap-2 border-t border-white/8 pt-6 text-xs text-faint sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-10 flex flex-col gap-2 border-t border-[color:var(--glass-border)] pt-6 text-xs text-faint sm:flex-row sm:items-center sm:justify-between">
           <p>
             © 2026 {siteConfig.name}. All rights reserved.
           </p>

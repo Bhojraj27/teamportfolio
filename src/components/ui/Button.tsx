@@ -5,10 +5,8 @@ import { cn } from "@/lib/utils";
 type Variant = "primary" | "secondary" | "ghost";
 
 const variants: Record<Variant, string> = {
-  primary:
-    "bg-gradient-to-r from-accent via-indigo to-violet text-white shadow-[0_0_28px_rgba(79,140,255,0.22)] hover:shadow-[0_0_36px_rgba(79,140,255,0.38)] hover:brightness-[1.05]",
-  secondary:
-    "border border-white/12 bg-white/[0.03] text-foreground hover:border-white/20 hover:bg-white/[0.06]",
+  primary: "btn-glass",
+  secondary: "btn-glass-secondary",
   ghost: "text-muted hover:text-foreground",
 };
 
@@ -28,7 +26,7 @@ export function ButtonLink({
   external?: boolean;
 }) {
   const classes = cn(
-    "group inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-medium tracking-tight transition duration-300",
+    "group inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-medium tracking-tight",
     variants[variant],
     className,
   );

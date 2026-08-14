@@ -4,7 +4,7 @@ import { lifecycleSteps } from "@/data/lifecycle";
 
 export function ProductLifecycle() {
   return (
-    <section className="relative py-24 sm:py-28">
+    <section className="section-shell section-alt relative py-24 sm:py-28">
       <Container>
         <Reveal>
           <SectionHeading
@@ -17,15 +17,15 @@ export function ProductLifecycle() {
         <Reveal className="mt-14">
           <ol className="relative grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
             <span
-              className="pointer-events-none absolute left-[1.15rem] top-4 bottom-4 w-px bg-gradient-to-b from-accent via-violet to-cyan sm:hidden"
+              className="pointer-events-none absolute left-[1.15rem] top-4 bottom-4 w-px bg-gradient-to-b from-white/25 to-transparent sm:hidden"
               aria-hidden="true"
             />
             {lifecycleSteps.map((step, index) => (
               <li
                 key={step.number}
-                className="relative rounded-2xl border border-white/8 bg-surface px-4 py-4 pl-12 sm:pl-4"
+                className="glass-interactive relative rounded-2xl px-4 py-4 pl-12 sm:pl-4"
               >
-                <span className="absolute left-4 top-5 size-2 rounded-full bg-accent shadow-[0_0_12px_rgba(79,140,255,0.8)] sm:hidden" />
+                <span className="absolute left-4 top-5 size-2 rounded-full bg-accent sm:hidden" />
                 <p className="font-mono text-[11px] text-accent">{step.number}</p>
                 <p className="mt-2 text-sm font-medium leading-5 text-foreground">
                   {step.title}

@@ -6,7 +6,7 @@ import { projects } from "@/data/projects";
 
 export function Projects() {
   return (
-    <section id="projects" className="relative py-24 sm:py-28">
+    <section id="projects" className="section-shell section-alt section-pad relative">
       <Container>
         <Reveal>
           <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
@@ -24,7 +24,7 @@ export function Projects() {
         <div className="mt-14 space-y-8">
           {projects.length === 0 ? (
             <Reveal>
-              <div className="rounded-[2rem] border border-white/8 bg-surface px-6 py-12 text-center sm:px-10">
+              <div className="glass-panel rounded-[2rem] px-6 py-12 text-center sm:px-10">
                 <p className="font-display text-2xl font-semibold tracking-tight">
                   Case studies coming soon
                 </p>

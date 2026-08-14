@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 export function EngagementModels() {
   return (
-    <section className="relative py-24 sm:py-28">
+    <section className="section-shell section-alt section-pad relative">
       <Container>
         <Reveal>
           <SectionHeading
@@ -20,10 +20,9 @@ export function EngagementModels() {
             <Reveal key={model.id} delay={index * 80}>
               <article
                 className={cn(
-                  "flex h-full flex-col rounded-[1.8rem] border p-7",
-                  model.featured
-                    ? "border-accent/40 bg-gradient-to-b from-accent/12 to-surface shadow-[0_0_40px_rgba(79,140,255,0.12)]"
-                    : "border-white/8 bg-surface",
+                  "glass-interactive flex h-full flex-col rounded-[1.8rem] p-7",
+                  model.featured &&
+                    "border-[color:color-mix(in_srgb,var(--accent)_45%,transparent)] bg-[color:var(--glass-cool)] shadow-[var(--glass-glow)]",
                 )}
               >
                 {model.featured ? (

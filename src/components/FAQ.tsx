@@ -16,7 +16,7 @@ export function FAQ() {
           <SectionHeading
             eyebrow="FAQ"
             title="Questions, answered."
-            subtitle="Straightforward answers for founders, agencies, and companies hiring remotely."
+            subtitle="Straightforward answers for founders, agencies, and companies building remotely."
           />
           <div className="divide-y divide-white/8 rounded-[1.8rem] border border-white/8 bg-surface">
             {faqs.map((item, index) => {

@@ -25,7 +25,7 @@ export default function OpenGraphImage() {
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div style={{ fontSize: 58, fontWeight: 700, lineHeight: 1.1, maxWidth: 900 }}>
-            Five Engineers. One Reliable Remote Development Team.
+            Reliable Remote Development. We design, build and deploy scalable digital products worldwide.
           </div>
           <div style={{ marginTop: 24, fontSize: 24, color: "#9aa1b5", maxWidth: 760 }}>
             React · Next.js · Node.js · AWS · MongoDB · React Native · CI/CD

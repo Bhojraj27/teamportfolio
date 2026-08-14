@@ -10,12 +10,12 @@ export const siteConfig = {
   name: TEAM_NAME,
   legalName: TEAM_NAME,
   tagline: "Remote engineering. Global collaboration. Production-ready software.",
-  headlineLead: "Five Engineers.",
-  headlineSupport: "One Reliable Remote Development Team.",
+  headlineLead: "Reliable Remote Development.",
+  headlineSupport: "We design, build and deploy scalable digital products worldwide.",
   supportingHeadline:
     "We design, build and deploy scalable digital products for businesses worldwide.",
   description:
-    "From MVPs and SaaS platforms to enterprise applications and mobile products, our team delivers production-ready software across the entire development lifecycle.",
+    "From MVPs and SaaS platforms to enterprise applications and mobile products, we deliver production-ready software across the entire development lifecycle.",
   availability: "Available for Remote Projects",
   microCopy: "Working remotely with clients worldwide",
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
@@ -24,16 +24,15 @@ export const siteConfig = {
   github: "https://github.com/Bhojraj27",
   whatsapp: "https://wa.me/917887780210",
   seo: {
-    title: `${TEAM_NAME} — Remote Software Development Team`,
+    title: `${TEAM_NAME} — Remote Software Development`,
     description:
-      "A remote software development team specializing in React, Next.js, Node.js, AWS, PostgreSQL, MySQL, MongoDB, React Native and CI/CD.",
+      "Remote software development specializing in React, Next.js, Node.js, AWS, PostgreSQL, MySQL, MongoDB, React Native and CI/CD.",
   },
   nav: [
     { href: "/#home", label: "Home" },
     { href: "/#services", label: "Services" },
     { href: "/#expertise", label: "Expertise" },
     { href: "/#projects", label: "Projects" },
-    { href: "/#team", label: "Team" },
     { href: "/#process", label: "Process" },
     { href: "/#contact", label: "Contact" },
   ],
@@ -41,7 +40,6 @@ export const siteConfig = {
     { href: "/#services", label: "Services" },
     { href: "/#expertise", label: "Expertise" },
     { href: "/#projects", label: "Projects" },
-    { href: "/#team", label: "Team" },
     { href: "/#contact", label: "Contact" },
   ],
   footerTech: [
@@ -58,7 +56,7 @@ export const siteConfig = {
 } as const;
 
 export const trustItems = [
-  "5 Engineers",
+  "Remote Engineering",
   "Full-Stack Development",
   "Web + Mobile",
   "AWS & Cloud",

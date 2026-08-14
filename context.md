@@ -8,11 +8,13 @@ If you are an AI assistant helping a teammate: follow this file before inventing
 
 ## What this project is
 
-**Kestryn** is a 5-person remote software development team. This repository is our public portfolio site. The goal is to attract **international clients** for remote, work-from-home engineering work.
+**Kestryn** is a remote software studio. This repository is our public portfolio site. The goal is to attract **international clients** for remote software development.
+
+Do **not** publish headcount, names, or photos on the live site.
 
 The site should feel like a high-end software studio — not a basic personal developer page.
 
-Primary conversion action: **Hire Our Team**.
+Primary conversion action: **Start a Project**.
 
 Secondary actions: View Our Work, Start a Project, Let's Work Together.
 
@@ -27,7 +29,7 @@ Target clients: startups, SaaS companies, international businesses, agencies, fo
 | Name | Kestryn |
 | Meaning | Coined name, close to *kestrel* (focus, precision, a small sharp team). Not a dictionary word. |
 | Tagline | Remote engineering. Global collaboration. Production-ready software. |
-| Headline | Five Engineers. One Reliable Remote Development Team. |
+| Headline | Reliable Remote Development. We design, build and deploy scalable digital products worldwide. |
 | Email | teamkestryn@gmail.com |
 | LinkedIn | https://www.linkedin.com/in/team-kestryn-191b79429 |
 | WhatsApp | https://wa.me/917887780210 |
@@ -41,13 +43,17 @@ Visual direction:
 - Premium, minimal, lots of whitespace
 - Subtle glow and motion — not neon, not cartoon, not a generic template
 
-Logo mark on the site: 5 connected nodes (one per engineer).
+Logo mark on the site: 4 connected nodes (frontend, backend, cloud, mobile).
 
 ---
 
 ## Team
 
-Five engineers. Two focus on **React Native**. Three focus on **MERN + Next.js + AWS + deployment**.
+Internal only. The public site **does not** show names, photos, headcount, or a Team page.
+
+`src/components/Team.tsx` and `src/data/team.ts` still exist so we can restore the section later. Do not import `Team` on the homepage unless everyone agrees to go public.
+
+Two people focus on **React Native**. Three focus on **MERN + Next.js + AWS + deployment**.
 
 | ID | Name | Role | Stack focus | Profile status |
 | --- | --- | --- | --- | --- |
@@ -160,7 +166,7 @@ public/
 
 Homepage section order:
 
-Hero → TrustBar → Services → TechStack → ProductLifecycle → Projects → Team → WhyUs → RemoteWork → Process → EngagementModels → FAQ → Contact → Footer
+Hero → TrustBar → Services → TechStack → ProductLifecycle → Projects → WhyUs → RemoteWork → Process → EngagementModels → FAQ → Contact → Footer
 
 ---
 
@@ -253,6 +259,6 @@ Fonts: Geist (body), Syne (headings), Geist Mono (labels).
 
 - Connect the contact API to `teamkestryn@gmail.com`
 - Replace site GitHub with a team organization when it exists
-- Teammates: fill photos, bios, experience, and links
+- Teammates: keep personal profiles in `src/data/team.ts` (not shown on the public site)
 - Add owned or permissioned case studies in `src/data/projects.ts`
 - Add the official Kestryn logo to the navbar when the mark is finalized

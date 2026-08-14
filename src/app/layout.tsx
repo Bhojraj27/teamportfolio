@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   description: siteConfig.seo.description,
   keywords: [
-    "remote software development team",
+    "remote software development",
     "React",
     "Next.js",
     "Node.js",

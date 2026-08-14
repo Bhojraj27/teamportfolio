@@ -12,9 +12,9 @@ export const engagementModels = [
     id: "dedicated",
     title: "Dedicated Team",
     description:
-      "A focused five-person engineering unit that ships continuously with your product roadmap.",
+      "A focused engineering unit that ships continuously with your product roadmap.",
     bestFor: ["Startups", "Growing companies", "Long-term development"],
-    cta: "Build Your Team",
+    cta: "Discuss Dedicated Work",
     featured: true,
   },
   {

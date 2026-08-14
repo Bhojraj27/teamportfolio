@@ -10,7 +10,7 @@ export function RemoteWork() {
         <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
           <Reveal>
             <SectionHeading
-              title="Your Team, Wherever You Are."
+              title="Engineering Support, Wherever You Are."
               subtitle="We work remotely with founders, startups, agencies and businesses around the world."
             />
             <ul className="mt-8 grid gap-2 sm:grid-cols-2">

@@ -1,3 +1,7 @@
+/**
+ * Team section is hidden from the public homepage and nav.
+ * Keep this component for later if we choose to show profiles.
+ */
 import Image from "next/image";
 import { Mail } from "lucide-react";
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
@@ -21,7 +25,7 @@ export function Team() {
           <SectionHeading
             eyebrow="Team"
             title="Meet the Engineering Team"
-            subtitle="Five specialists working as one distributed engineering team."
+            subtitle="A remote engineering studio working as one delivery group."
           />
         </Reveal>
 

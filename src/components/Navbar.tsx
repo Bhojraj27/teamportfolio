@@ -55,7 +55,7 @@ export function Navbar() {
           href="/#contact"
           className="group hidden items-center gap-2 rounded-full border border-white/10 bg-white/4 px-4 py-2 text-[13px] font-medium text-foreground transition hover:border-accent/40 hover:bg-accent/10 lg:inline-flex"
         >
-          Hire Our Team
+          Start a Project
           <span aria-hidden="true" className="transition group-hover:translate-x-0.5">
             →
           </span>
@@ -96,7 +96,7 @@ export function Navbar() {
               onClick={() => setOpen(false)}
               className="mt-8 inline-flex items-center justify-center rounded-full bg-linear-to-r from-accent via-indigo to-violet px-5 py-3.5 text-sm font-medium text-white"
             >
-              Hire Our Team →
+              Start a Project →
             </Link>
           </nav>
         </div>

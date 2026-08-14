@@ -1,6 +1,6 @@
-# Kestryn — Remote Engineering Team Portfolio
+# Kestryn — Remote Engineering Portfolio
 
-Premium Next.js portfolio for a five-person remote software team.
+Premium Next.js portfolio for a remote software studio.
 
 **Read [`context.md`](./context.md) first.** That file is the full project context for every developer (and for AI tools helping you edit this repo).
 

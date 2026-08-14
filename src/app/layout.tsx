@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Syne } from "next/font/google";
+import { FluidCursor } from "@/components/FluidCursor";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
@@ -109,6 +110,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             Skip to content
           </a>
           <div className="grain" aria-hidden="true" />
+          <FluidCursor />
           <Navbar />
           <main id="main" className="flex-1 overflow-x-hidden">
             {children}

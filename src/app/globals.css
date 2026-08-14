@@ -44,6 +44,12 @@
   --cta-bg-hover: #a8bbd4;
   --cta-text: #0b0d10;
   --cta-secondary-border: rgb(143 163 188 / 0.35);
+  --cursor-dot: #f4f6f9;
+  --cursor-ring: rgb(143 163 188 / 0.42);
+  --cursor-ring-fill: rgb(143 163 188 / 0.08);
+  --cursor-glow: rgb(143 163 188 / 0.28);
+  --cursor-hover-ring: rgb(168 187 212 / 0.7);
+  --cursor-hover-fill: rgb(143 163 188 / 0.14);
 }
 
 /* Soft Frost Glass — light */
@@ -89,6 +95,12 @@
   --cta-bg-hover: #3a4f6a;
   --cta-text: #f8fafc;
   --cta-secondary-border: rgb(75 98 128 / 0.32);
+  --cursor-dot: #0f172a;
+  --cursor-ring: rgb(75 98 128 / 0.45);
+  --cursor-ring-fill: rgb(75 98 128 / 0.08);
+  --cursor-glow: rgb(75 98 128 / 0.22);
+  --cursor-hover-ring: rgb(58 79 106 / 0.75);
+  --cursor-hover-fill: rgb(75 98 128 / 0.14);
 }
 
 @theme inline {
@@ -526,6 +538,88 @@ html.theme-animating *::after {
   transform: translateY(-2px);
 }
 
+/* Desktop fluid cursor — GPU transforms only */
+@media (hover: hover) and (pointer: fine) {
+  html.has-fluid-cursor,
+  html.has-fluid-cursor * {
+    cursor: none !important;
+  }
+
+  html.has-fluid-cursor input,
+  html.has-fluid-cursor textarea,
+  html.has-fluid-cursor select,
+  html.has-fluid-cursor [contenteditable="true"] {
+    cursor: text !important;
+  }
+}
+
+.fluid-cursor {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.28s ease;
+}
+
+.fluid-cursor[data-visible="true"] {
+  opacity: 1;
+}
+
+.fluid-cursor__dot,
+.fluid-cursor__ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 999px;
+  will-change: transform;
+  transform: translate3d(-100px, -100px, 0);
+  backface-visibility: hidden;
+}
+
+.fluid-cursor__dot {
+  width: 7px;
+  height: 7px;
+  background: var(--cursor-dot);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 35%, transparent);
+  transition:
+    background-color 0.35s ease,
+    box-shadow 0.35s ease,
+    opacity 0.25s ease;
+}
+
+.fluid-cursor__ring {
+  width: 38px;
+  height: 38px;
+  border: 1.5px solid var(--cursor-ring);
+  background: var(--cursor-ring-fill);
+  box-shadow: 0 0 24px var(--cursor-glow);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  transition:
+    border-color 0.35s ease,
+    background-color 0.35s ease,
+    box-shadow 0.35s ease,
+    opacity 0.25s ease;
+}
+
+.fluid-cursor[data-hover="true"] .fluid-cursor__dot {
+  background: var(--accent-strong);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 55%, transparent);
+  opacity: 0.85;
+}
+
+.fluid-cursor[data-hover="true"] .fluid-cursor__ring {
+  border-color: var(--cursor-hover-ring);
+  background: var(--cursor-hover-fill);
+  box-shadow: 0 0 32px var(--cursor-glow);
+}
+
+.fluid-cursor[data-press="true"] .fluid-cursor__ring {
+  border-color: var(--accent-strong);
+  background: color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -578,5 +672,9 @@ html.theme-animating *::after {
   .animate-spin-slow,
   .animate-pulse-dot {
     animation: none;
+  }
+
+  .fluid-cursor {
+    display: none !important;
   }
 }

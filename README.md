@@ -26,7 +26,7 @@ Open [http://localhost:3000](http://localhost:3000).
 | --- | --- |
 | `src/data/site.ts` | Studio name, email, LinkedIn, GitHub, WhatsApp, SEO |
 | `src/data/team.ts` | Each member edits their own card: photo, bio, experience, skills, links |
-| `src/data/projects.ts` | Case studies (Bynaus AI is first; add more as they are ready) |
+| `src/data/projects.ts` | Case studies (empty until we add work we can publish) |
 | `src/data/services.ts` | Service copy and tags |
 | `src/data/technologies.ts` | Stack |
 | `src/data/faqs.ts` | FAQ answers |

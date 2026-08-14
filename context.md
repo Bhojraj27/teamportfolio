@@ -97,16 +97,16 @@ Engagement models (no fake prices on the site):
 
 ## Current portfolio
 
-Only **real work** should be published.
+The public project list is **empty on purpose**.
 
-| Project | Status | Live |
-| --- | --- | --- |
-| Bynaus AI | Live on the site | https://bynaus.ai |
-| Other work | Add when ready | — |
+Only publish:
 
-Bynaus AI is a multi-tenant construction operations SaaS PWA: attendance, timecards, daily reports, sheets/annotation, AI companion, AWS, Node.js API, MongoDB. Case study: `/projects/bynaus-ai`.
+- Personal / freelance work Kestryn owns, or
+- Company work with **written permission**, credited accurately
 
-When adding a project, use `src/data/projects.ts`. Do not invent clients, revenue, user counts, or results.
+Do not add employer or client products without approval. Do not invent clients, revenue, user counts, or results.
+
+When adding a project, use `src/data/projects.ts`. Until then, the Projects section shows a “coming soon” state.
 
 ---
 
@@ -184,7 +184,7 @@ Do not rewrite other people's cards.
 ## How to add a project
 
 1. Open `src/data/projects.ts`.
-2. Copy the Bynaus AI object and change the fields.
+2. Add a new object using the comment template at the top of that file.
 3. Set a unique `slug` (used in the URL: `/projects/your-slug`).
 4. Set `liveUrl` to the real URL, or `"#"` if there is no live demo.
 5. Set `githubUrl` to the repo, or `""` to hide the GitHub button.
@@ -254,5 +254,5 @@ Fonts: Geist (body), Syne (headings), Geist Mono (labels).
 - Connect the contact API to `teamkestryn@gmail.com`
 - Replace site GitHub with a team organization when it exists
 - Teammates: fill photos, bios, experience, and links
-- Add more real projects as they are ready
+- Add owned or permissioned case studies in `src/data/projects.ts`
 - Add the official Kestryn logo to the navbar when the mark is finalized

@@ -1,106 +1,116 @@
 @import "tailwindcss";
 
-/* Electric Sky Glass — dark */
+/*
+ * Kestryn Horizon — design system
+ * Readable neutral bases + bright interactive accents + neutral glass.
+ * Signature: Horizon Blue (#5B8CFF) + Aurora Violet (#8B7CFF) + Signal Teal (#2EC4B6)
+ */
+
+/* Kestryn Horizon — dark */
 :root,
 [data-theme="dark"] {
   color-scheme: dark;
-  --background: #041525;
-  --background-alt: #07233a;
-  --foreground: #f4fbff;
-  --muted: #8fd4f2;
-  --faint: #5ea8c9;
-  --surface: #0a2b45;
-  --surface-2: #0e3654;
-  --border: rgb(0 194 255 / 0.28);
-  --accent: #00c2ff;
-  --accent-strong: #6adcff;
-  --accent-soft: rgb(0 194 255 / 0.22);
-  --accent-2: #00e0b8;
-  --accent-2-soft: rgb(0 224 184 / 0.2);
-  --on-accent: #03111c;
-  --indigo: #00c2ff;
-  --violet: #4fd4ff;
-  --cyan: #00e0b8;
-  --glass: rgb(0 194 255 / 0.1);
-  --glass-cool: rgb(0 194 255 / 0.14);
-  --glass-strong: rgb(255 255 255 / 0.1);
-  --glass-hover: rgb(0 194 255 / 0.24);
-  --glass-border: rgb(106 220 255 / 0.28);
-  --glass-border-hover: rgb(0 194 255 / 0.72);
-  --glass-shadow: 0 16px 44px rgb(0 20 40 / 0.45);
-  --glass-inset: inset 0 1px 0 rgb(255 255 255 / 0.16);
-  --glass-glow: 0 0 0 1px rgb(0 194 255 / 0.35), 0 14px 36px rgb(0 194 255 / 0.24);
-  --nav-bg: rgb(4 21 37 / 0.74);
-  --mesh-a: rgb(0 194 255 / 0.38);
-  --mesh-b: rgb(0 224 184 / 0.22);
-  --mesh-c: rgb(79 212 255 / 0.14);
-  --grid-line: rgb(106 220 255 / 0.1);
-  --selection: rgb(0 194 255 / 0.42);
+  --background: #0a0f18;
+  --background-alt: #111827;
+  --foreground: #f8fafc;
+  --muted: #94a3b8;
+  --faint: #64748b;
+  --surface: #151c28;
+  --surface-2: #1a2433;
+  --border: rgb(255 255 255 / 0.1);
+  --accent: #5b8cff;
+  --accent-strong: #8cb4ff;
+  --accent-soft: rgb(91 140 255 / 0.16);
+  --accent-2: #2ec4b6;
+  --accent-2-soft: rgb(46 196 182 / 0.14);
+  --brand: #8b7cff;
+  --brand-soft: rgb(139 124 255 / 0.14);
+  --on-accent: #0a0f18;
+  --indigo: #5b8cff;
+  --violet: #8b7cff;
+  --cyan: #2ec4b6;
+  --glass: rgb(255 255 255 / 0.05);
+  --glass-cool: rgb(255 255 255 / 0.04);
+  --glass-strong: rgb(255 255 255 / 0.08);
+  --glass-hover: rgb(91 140 255 / 0.12);
+  --glass-border: rgb(255 255 255 / 0.1);
+  --glass-border-hover: rgb(91 140 255 / 0.55);
+  --glass-shadow: 0 16px 44px rgb(0 0 0 / 0.38);
+  --glass-inset: inset 0 1px 0 rgb(255 255 255 / 0.12);
+  --glass-glow: 0 0 0 1px rgb(91 140 255 / 0.28), 0 14px 32px rgb(91 140 255 / 0.14);
+  --nav-bg: rgb(10 15 24 / 0.78);
+  --mesh-a: rgb(91 140 255 / 0.16);
+  --mesh-b: rgb(139 124 255 / 0.09);
+  --mesh-c: rgb(46 196 182 / 0.07);
+  --grid-line: rgb(255 255 255 / 0.05);
+  --selection: rgb(91 140 255 / 0.32);
   --text-grad-a: #ffffff;
-  --text-grad-b: #b8eeff;
-  --text-grad-c: #00c2ff;
-  --mockup-bg: #08263d;
-  --cta-bg: #00c2ff;
-  --cta-bg-hover: #4fd4ff;
-  --cta-text: #03111c;
-  --cta-secondary-border: rgb(0 194 255 / 0.55);
-  --cursor-dot: #f4fbff;
-  --cursor-ring: rgb(0 194 255 / 0.58);
-  --cursor-ring-fill: rgb(0 194 255 / 0.14);
-  --cursor-glow: rgb(0 194 255 / 0.38);
-  --cursor-hover-ring: rgb(106 220 255 / 0.88);
-  --cursor-hover-fill: rgb(0 194 255 / 0.22);
+  --text-grad-b: #b8c9ff;
+  --text-grad-c: #8b7cff;
+  --mockup-bg: #121a28;
+  --cta-bg: #5b8cff;
+  --cta-bg-hover: #7ba3ff;
+  --cta-text: #0a0f18;
+  --cta-secondary-border: rgb(91 140 255 / 0.42);
+  --cursor-dot: #f8fafc;
+  --cursor-ring: rgb(91 140 255 / 0.5);
+  --cursor-ring-fill: rgb(91 140 255 / 0.1);
+  --cursor-glow: rgb(91 140 255 / 0.28);
+  --cursor-hover-ring: rgb(140 180 255 / 0.82);
+  --cursor-hover-fill: rgb(91 140 255 / 0.16);
 }
 
-/* Electric Sky Glass — light */
+/* Kestryn Horizon — light */
 [data-theme="light"] {
   color-scheme: light;
-  --background: #eaf7ff;
-  --background-alt: #d7f0ff;
-  --foreground: #04263d;
-  --muted: #1f6484;
-  --faint: #3d7d9a;
+  --background: #f8fafc;
+  --background-alt: #f1f5f9;
+  --foreground: #0f172a;
+  --muted: #475569;
+  --faint: #64748b;
   --surface: #ffffff;
-  --surface-2: #f2fbff;
-  --border: rgb(0 138 214 / 0.2);
-  --accent: #008ad6;
-  --accent-strong: #006fb3;
-  --accent-soft: rgb(0 138 214 / 0.14);
-  --accent-2: #00a88a;
-  --accent-2-soft: rgb(0 168 138 / 0.16);
-  --on-accent: #f4fbff;
-  --indigo: #008ad6;
-  --violet: #1a9be0;
-  --cyan: #00a88a;
-  --glass: rgb(255 255 255 / 0.74);
-  --glass-cool: rgb(0 138 214 / 0.09);
-  --glass-strong: rgb(255 255 255 / 0.9);
-  --glass-hover: rgb(215 240 255 / 0.96);
-  --glass-border: rgb(0 138 214 / 0.2);
-  --glass-border-hover: rgb(0 138 214 / 0.5);
-  --glass-shadow: 0 16px 40px rgb(0 138 214 / 0.14);
-  --glass-inset: inset 0 1px 0 rgb(255 255 255 / 0.96);
-  --glass-glow: 0 0 0 1px rgb(0 138 214 / 0.22), 0 14px 32px rgb(0 138 214 / 0.16);
-  --nav-bg: rgb(234 247 255 / 0.82);
-  --mesh-a: rgb(0 138 214 / 0.22);
-  --mesh-b: rgb(0 168 138 / 0.16);
-  --mesh-c: rgb(255 255 255 / 0.92);
-  --grid-line: rgb(0 138 214 / 0.1);
-  --selection: rgb(0 194 255 / 0.32);
-  --text-grad-a: #04263d;
-  --text-grad-b: #008ad6;
-  --text-grad-c: #00a88a;
-  --mockup-bg: #f4fbff;
-  --cta-bg: #008ad6;
-  --cta-bg-hover: #006fb3;
-  --cta-text: #f4fbff;
-  --cta-secondary-border: rgb(0 138 214 / 0.38);
-  --cursor-dot: #04263d;
-  --cursor-ring: rgb(0 138 214 / 0.5);
-  --cursor-ring-fill: rgb(0 138 214 / 0.12);
-  --cursor-glow: rgb(0 138 214 / 0.28);
-  --cursor-hover-ring: rgb(0 111 179 / 0.8);
-  --cursor-hover-fill: rgb(0 138 214 / 0.16);
+  --surface-2: #f8fafc;
+  --border: rgb(15 23 42 / 0.1);
+  --accent: #3b71f6;
+  --accent-strong: #1d4ed8;
+  --accent-soft: rgb(59 113 246 / 0.12);
+  --accent-2: #0d9488;
+  --accent-2-soft: rgb(13 148 136 / 0.12);
+  --brand: #6366f1;
+  --brand-soft: rgb(99 102 241 / 0.1);
+  --on-accent: #f8fafc;
+  --indigo: #3b71f6;
+  --violet: #6366f1;
+  --cyan: #0d9488;
+  --glass: rgb(255 255 255 / 0.72);
+  --glass-cool: rgb(255 255 255 / 0.55);
+  --glass-strong: rgb(255 255 255 / 0.92);
+  --glass-hover: rgb(255 255 255 / 0.98);
+  --glass-border: rgb(15 23 42 / 0.1);
+  --glass-border-hover: rgb(59 113 246 / 0.42);
+  --glass-shadow: 0 16px 40px rgb(15 23 42 / 0.08);
+  --glass-inset: inset 0 1px 0 rgb(255 255 255 / 0.95);
+  --glass-glow: 0 0 0 1px rgb(59 113 246 / 0.18), 0 14px 30px rgb(59 113 246 / 0.1);
+  --nav-bg: rgb(248 250 252 / 0.84);
+  --mesh-a: rgb(59 113 246 / 0.1);
+  --mesh-b: rgb(99 102 241 / 0.07);
+  --mesh-c: rgb(13 148 136 / 0.06);
+  --grid-line: rgb(15 23 42 / 0.05);
+  --selection: rgb(59 113 246 / 0.2);
+  --text-grad-a: #0f172a;
+  --text-grad-b: #3b71f6;
+  --text-grad-c: #6366f1;
+  --mockup-bg: #ffffff;
+  --cta-bg: #3b71f6;
+  --cta-bg-hover: #1d4ed8;
+  --cta-text: #f8fafc;
+  --cta-secondary-border: rgb(59 113 246 / 0.32);
+  --cursor-dot: #0f172a;
+  --cursor-ring: rgb(59 113 246 / 0.45);
+  --cursor-ring-fill: rgb(59 113 246 / 0.08);
+  --cursor-glow: rgb(59 113 246 / 0.2);
+  --cursor-hover-ring: rgb(29 78 216 / 0.75);
+  --cursor-hover-fill: rgb(59 113 246 / 0.12);
 }
 
 @theme inline {
@@ -114,6 +124,7 @@
   --color-border: var(--border);
   --color-accent: var(--accent);
   --color-accent-2: var(--accent-2);
+  --color-brand: var(--brand);
   --color-indigo: var(--indigo);
   --color-violet: var(--violet);
   --color-cyan: var(--cyan);
@@ -303,12 +314,21 @@ html.theme-animating *::after {
   background: linear-gradient(
     120deg,
     var(--text-grad-a) 0%,
-    var(--text-grad-b) 48%,
+    var(--text-grad-b) 42%,
     var(--text-grad-c) 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+.brand-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--accent) 0%,
+    var(--brand) 55%,
+    var(--accent-2) 100%
+  );
 }
 
 .glass,
@@ -444,7 +464,8 @@ html.theme-animating *::after {
 
 .section-accent-wash {
   background:
-    radial-gradient(720px 320px at 10% 0%, var(--accent-soft), transparent 60%),
+    radial-gradient(720px 320px at 10% 0%, var(--accent-soft), transparent 62%),
+    radial-gradient(520px 280px at 92% 8%, var(--brand-soft), transparent 58%),
     var(--background);
 }
 

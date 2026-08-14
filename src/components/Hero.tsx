@@ -17,10 +17,10 @@ export function Hero() {
       <Container className="relative">
         <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-center lg:gap-10 xl:gap-12">
           <div className="max-w-2xl">
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[color:color-mix(in_srgb,var(--accent)_35%,transparent)] bg-[color:var(--accent-soft)] px-3 py-1.5 text-xs text-muted backdrop-blur-md">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[color:color-mix(in_srgb,var(--accent-2)_40%,transparent)] bg-[color:var(--accent-2-soft)] px-3 py-1.5 text-xs text-muted backdrop-blur-md">
               <span className="relative flex size-2">
-                <span className="absolute inline-flex size-full rounded-full bg-accent opacity-50 animate-pulse-dot" />
-                <span className="relative inline-flex size-2 rounded-full bg-accent" />
+                <span className="absolute inline-flex size-full rounded-full bg-accent-2 opacity-50 animate-pulse-dot" />
+                <span className="relative inline-flex size-2 rounded-full bg-accent-2" />
               </span>
               {siteConfig.availability}
             </div>

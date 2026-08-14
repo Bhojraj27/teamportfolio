@@ -247,15 +247,34 @@ Do not commit `.env.local` or secrets.
 
 ---
 
-## Design tokens (quick)
+## Design tokens (Kestryn Horizon)
 
 Themes via `data-theme` on `<html>` (`ThemeProvider` + Navbar sun/moon toggle). Defaults to system preference; persists in `localStorage` key `kestryn-theme`.
 
-**Dark (Electric Sky):** base `#041525` / alt `#07233A`, text `#F4FBFF`, primary `#00C2FF`, secondary mint `#00E0B8`. Colored glass + visible sky/mint washes.
+### Brand palette
 
-**Light (Electric Sky):** base `#EAF7FF` / alt `#D7F0FF`, navy text, accent `#008AD6`, mint `#00A88A`. White glass cards with bright azure borders.
+| Token | Dark | Light | Role |
+|---|---|---|---|
+| Background | `#0A0F18` | `#F8FAFC` | Page base (neutral, readable) |
+| Background alt | `#111827` | `#F1F5F9` | Section alternation |
+| Foreground | `#F8FAFC` | `#0F172A` | Headings, primary text |
+| Muted | `#94A3B8` | `#475569` | Body copy (neutral, not tinted) |
+| Faint | `#64748B` | `#64748B` | Captions, labels |
+| Accent | `#5B8CFF` | `#3B71F6` | CTAs, links, active states |
+| Brand | `#8B7CFF` | `#6366F1` | Signature violet (logo, gradients) |
+| Accent 2 | `#2EC4B6` | `#0D9488` | Success, availability, secondary highlights |
 
-Hierarchy helpers: `.section-alt`, `.section-accent-wash`, `.section-sage-wash`, `.glass-cool`, `.glass-interactive` (accent border/glow on hover), `.btn-glass` (accent fill CTA), `.btn-glass-secondary` (quiet glass + accent border), `.card-accent-edge`, `.chip-interactive`, `.nav-link`. Sections use `.section-shell` for containment.
+### Color usage rules
+
+1. **Readability first:** body text uses `--muted` / `--faint` (neutral slate). Never use accent tints for paragraphs.
+2. **Bright on action:** solid accent fill for primary CTAs (`.btn-glass`). Accent borders/glow only on hover.
+3. **Neutral glass:** default glass surfaces use white/black alpha. Color appears on `:hover`, focus, and selected states.
+4. **Brand signature:** Aurora Violet (`--brand`) appears in logo, headline gradient (`.text-gradient`), and one section wash — not everywhere.
+5. **Teal sparingly:** `--accent-2` for availability, trust signals, and `.section-sage-wash` only.
+
+### Utilities
+
+`.section-alt`, `.section-accent-wash`, `.section-sage-wash`, `.glass`, `.glass-cool`, `.glass-strong`, `.glass-interactive`, `.btn-glass`, `.btn-glass-secondary`, `.card-accent-edge`, `.chip-interactive`, `.nav-link`, `.text-gradient`, `.brand-gradient`. Sections use `.section-shell` for containment.
 
 Fonts: Geist (body), Syne (headings), Geist Mono (labels).
 
